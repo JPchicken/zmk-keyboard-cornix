@@ -215,7 +215,7 @@
         };
 
         end {
-            bindings = <&kp RS(END)>;
+            bindings = <&kp END>;
             key-positions = <21 22>;
             layers = <1>;
         };
