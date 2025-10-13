@@ -227,7 +227,7 @@
             layers = <1>;
         };
 
-        eisuu {
+        eisuu2 {
             bindings = <&kp LEFT_GUI>;
             key-positions = <15 14>;
             layers = <0>;
