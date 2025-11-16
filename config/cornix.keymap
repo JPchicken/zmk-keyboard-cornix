@@ -151,9 +151,9 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <170>;
-            quick-tap-ms = <170>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <170>;
+            quick-tap-ms = <80>;
+            flavor = "balanced";
+            require-prior-idle-ms = <120>;
         };
 
         mt220_behavior: mt220_behavior {
@@ -333,10 +333,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&mt160_behavior LEFT_ALT LG(V)  &mt160_behavior CAPS LG(C)  &kp L                           &kp U                     &kp COMMA                   &kp PERIOD                                   &kp K        &kp W                        &kp R                          &kp Y                            &mt160_behavior K_APPLICATION RS(RG(P))  &mt220_behavior RS(RA(RC(RG(T)))) RG(RS(V))
-&kp Q                           &kp E                       &mt170_behavior LEFT_CONTROL I  &mt170_behavior LSHIFT A  &mt170_behavior LEFT_GUI O  &kp MINUS                                    &kp G        &mt170_behavior RIGHT_GUI T  &mt170_behavior RIGHT_SHIFT N  &mt170_behavior RIGHT_CONTROL S  &kp H                                    &kp P
-&kp SEMICOLON                   &kp Z                       &kp X                           &kp C                     &kp V                       &trans       &kp C_PLAY_PAUSE  &kp RC(DOWN)  &trans       &kp D                        &kp M                          &kp J                            &kp B                                    &kp F
-&none                           &none                       &none                           &lt 3 LA(TAB)             &lt 2 TAB                   &lt 1 SPACE                                  &lt 1 ENTER  &lt 2 BACKSPACE              &lt 3 DELETE                   &none                            &none                                    &none
+&mt160_behavior LEFT_ALT LG(V)  &mt160_behavior CAPS LG(C)  &kp L                           &kp U                                 &kp COMMA                       &kp PERIOD                                                      &kp K        &kp W                        &kp R                          &kp Y                            &mt160_behavior K_APPLICATION RS(RG(P))  &mt220_behavior RS(RA(RC(RG(T)))) RG(RS(V))
+&kp Q                           &kp E                       &mt170_behavior LEFT_CONTROL I  &mt170_behavior LSHIFT A              &mt170_behavior LEFT_GUI O      &kp MINUS                                                       &kp G        &mt170_behavior RIGHT_GUI T  &mt170_behavior RIGHT_SHIFT N  &mt170_behavior RIGHT_CONTROL S  &kp H                                    &kp P
+&kp SEMICOLON                   &kp Z                       &kp X                           &kp C                                 &kp V                           &trans                          &kp C_PLAY_PAUSE  &kp RC(DOWN)  &trans       &kp D                        &kp M                          &kp J                            &kp B                                    &kp F
+&none                           &none                       &none                           &mt170_behavior LEFT_CONTROL LA(TAB)  &mt170_behavior LEFT_SHIFT TAB  &mt170_behavior LEFT_GUI SPACE                                  &lt 1 ENTER  &lt 2 BACKSPACE              &lt 3 DELETE                   &none                            &none                                    &none
             >;
 
             sensor-bindings =
@@ -381,7 +381,7 @@
 &kp ASTERISK   &M6                &M5        &kp GRAVE        &kp COMMA    &kp PERIOD                                      &kp CARET  &kp EXCLAMATION  &kp QUESTION     &M4          &M3       &kp PIPE
 &kp TILDE      &kp EQUAL          &kp PLUS   &kp MINUS        &kp LG(X)    &kp UNDERSCORE                                  &kp RG(A)  &kp LEFT_BRACE   &kp RIGHT_BRACE  &M7          &M8       &kp BACKSLASH
 &kp SEMICOLON  &kp LS(SEMICOLON)  &kp LG(D)  &kp LG(W)        &kp LG(T)    &trans          &kp C_PLAY_PAUSE  &kp RC(DOWN)  &trans     &kp PERCENT      &kp AMPERSAND    &kp AT_SIGN  &kp HASH  &kp SLASH
-&trans         &trans             &trans     &kp LC(LS(TAB))  &kp LC(TAB)  &trans                                          &trans     &kp RC(S)        &kp RC(K)        &trans       &trans    &trans
+&trans         &trans             &trans     &kp LC(LS(TAB))  &kp LC(TAB)  &trans                                          &kp RC(S)  &trans           &kp RC(K)        &trans       &trans    &trans
             >;
 
             sensor-bindings =
@@ -392,10 +392,10 @@
         Navi_layer {
             display-name = "Navi";
             bindings = <
-&kp LS(LG(NUMBER_4))       &kp LS(LG(NUMBER_3))   &kp LC(LS(NUMBER_7))  &kp LC(LS(NUMBER_8))  &kp LC(LS(NUMBER_9))  &kp C_VOLUME_UP                                    &msc SCRL_DOWN  &mkp MB4        &mmv MOVE_UP     &mkp MB5         &kp RG(T)      &kp RG(W)
-&kp LS(LA(LC(LG(SPACE))))  &kp LS(LC(LA(LG(T))))  &kp LC(LS(NUMBER_4))  &kp LC(LS(N5))        &kp LC(LS(NUMBER_6))  &kp C_VOLUME_DOWN                                  &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &kp RG(L)      &kp RS(RG(T))
-&kp LG(Z)                  &kp LG(X)              &kp LC(LS(NUMBER_1))  &kp LC(LS(NUMBER_2))  &kp LC(LS(NUMBER_3))  &trans             &kp C_PLAY_PAUSE  &kp RC(DOWN)  &trans          &msc SCRL_LEFT  &msc SCRL_RIGHT  &kp RC(LEFT)     &kp RC(RIGHT)  &kp RG(R)
-&trans                     &trans                 &trans                &bt BT_SEL 0          &bt BT_SEL 1          &bt BT_SEL 2                                       &mkp LCLK       &mkp RCLK       &mkp MCLK        &trans           &trans         &trans
+&kp LS(LG(NUMBER_4))       &kp LS(LG(NUMBER_3))   &kp LC(LS(NUMBER_7))  &kp LC(LS(NUMBER_8))  &kp LC(LS(NUMBER_9))  &kp C_VOLUME_UP                                    &msc SCRL_DOWN  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &kp RG(T)        &kp RG(W)
+&kp LS(LA(LC(LG(SPACE))))  &kp LS(LC(LA(LG(T))))  &kp LC(LS(NUMBER_4))  &kp LC(LS(N5))        &kp LC(LS(NUMBER_6))  &kp C_VOLUME_DOWN                                  &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp RG(L)        &kp RS(RG(T))
+&kp LG(Z)                  &kp LG(X)              &kp LC(LS(NUMBER_1))  &kp LC(LS(NUMBER_2))  &kp LC(LS(NUMBER_3))  &trans             &kp C_PLAY_PAUSE  &kp RC(DOWN)  &msc SCRL_LEFT  &mkp MB4        &mkp MCLK       &mkp MB5         &msc SCRL_RIGHT  &kp RG(R)
+&trans                     &trans                 &trans                &bt BT_SEL 0          &bt BT_SEL 1          &bt BT_SEL 2                                       &mkp LCLK       &mkp RCLK       &trans          &trans           &trans           &trans
             >;
 
             sensor-bindings =
