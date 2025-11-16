@@ -144,15 +144,15 @@
             flavor = "tap-preferred";
         };
 
-        mt170_behavior: mt170_behavior {
+        mt200_behavior: mt200_behavior {
             compatible = "zmk,behavior-hold-tap";
-            label = "MT170_BEHAVIOR";
+            label = "MT200_BEHAVIOR";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <80>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             require-prior-idle-ms = <120>;
         };
 
@@ -165,6 +165,18 @@
             tapping-term-ms = <220>;
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
+        };
+
+        mt170_behavior: mt170_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT170_BEHAVIOR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <80>;
+            flavor = "balanced";
+            require-prior-idle-ms = <120>;
         };
     };
 
@@ -334,7 +346,7 @@
 
             bindings = <
 &mt160_behavior LEFT_ALT LG(V)  &mt160_behavior CAPS LG(C)  &kp L                           &kp U                                 &kp COMMA                       &kp PERIOD                                                      &kp K        &kp W                        &kp R                          &kp Y                            &mt160_behavior K_APPLICATION RS(RG(P))  &mt220_behavior RS(RA(RC(RG(T)))) RG(RS(V))
-&kp Q                           &kp E                       &mt170_behavior LEFT_CONTROL I  &mt170_behavior LSHIFT A              &mt170_behavior LEFT_GUI O      &kp MINUS                                                       &kp G        &mt170_behavior RIGHT_GUI T  &mt170_behavior RIGHT_SHIFT N  &mt170_behavior RIGHT_CONTROL S  &kp H                                    &kp P
+&kp Q                           &kp E                       &mt200_behavior LEFT_CONTROL I  &mt200_behavior LSHIFT A              &mt200_behavior LEFT_GUI O      &kp MINUS                                                       &kp G        &mt200_behavior RIGHT_GUI T  &mt200_behavior RIGHT_SHIFT N  &mt200_behavior RIGHT_CONTROL S  &kp H                                    &kp P
 &kp SEMICOLON                   &kp Z                       &kp X                           &kp C                                 &kp V                           &trans                          &kp C_PLAY_PAUSE  &kp RC(DOWN)  &trans       &kp D                        &kp M                          &kp J                            &kp B                                    &kp F
 &none                           &none                       &none                           &mt170_behavior LEFT_CONTROL LA(TAB)  &mt170_behavior LEFT_SHIFT TAB  &mt170_behavior LEFT_GUI SPACE                                  &lt 1 ENTER  &lt 2 BACKSPACE              &lt 3 DELETE                   &none                            &none                                    &none
             >;
