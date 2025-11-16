@@ -144,9 +144,9 @@
             flavor = "tap-preferred";
         };
 
-        mt200_behavior: mt200_behavior {
+        mt225_behavior: mt225_behavior {
             compatible = "zmk,behavior-hold-tap";
-            label = "MT200_BEHAVIOR";
+            label = "MT225_BEHAVIOR";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -368,7 +368,7 @@
 
             bindings = <
 &mt160_behavior LEFT_ALT LG(V)  &mt160_behavior CAPS LG(C)  &kp L                           &kp U                                 &kp COMMA                       &kp PERIOD                                                      &kp K        &kp W                        &kp R                          &kp Y                            &mt160_behavior K_APPLICATION RS(RG(P))  &mt220_behavior RS(RA(RC(RG(T)))) RG(RS(V))
-&kp Q                           &kp E                       &mt200_behavior LEFT_CONTROL I  &mt200_behavior LSHIFT A              &mt200_behavior LEFT_GUI O      &kp MINUS                                                       &kp G        &mt200_behavior RIGHT_GUI T  &mt200_behavior RIGHT_SHIFT N  &mt200_behavior RIGHT_CONTROL S  &kp H                                    &kp P
+&kp Q                           &kp E                       &mt225_behavior LEFT_CONTROL I  &mt225_behavior LSHIFT A              &mt225_behavior LEFT_GUI O      &kp MINUS                                                       &kp G        &mt225_behavior RIGHT_GUI T  &mt225_behavior RIGHT_SHIFT N  &mt225_behavior RIGHT_CONTROL S  &kp H                                    &kp P
 &kp SEMICOLON                   &kp Z                       &kp X                           &kp C                                 &kp V                           &trans                          &kp C_PLAY_PAUSE  &kp RC(DOWN)  &trans       &kp D                        &kp M                          &kp J                            &kp B                                    &kp F
 &none                           &none                       &none                           &mt170_behavior LEFT_CONTROL LA(TAB)  &mt170_behavior LEFT_SHIFT TAB  &mt170_behavior LEFT_GUI SPACE                                  &lt 1 ENTER  &lt 2 BACKSPACE              &lt 3 DELETE                   &none                            &none                                    &none
             >;
@@ -429,7 +429,7 @@
 &kp LS(LG(NUMBER_4))       &kp LS(LG(NUMBER_3))   &kp LC(LS(NUMBER_7))  &kp LC(LS(NUMBER_8))  &kp LC(LS(NUMBER_9))  &kp C_VOLUME_UP                                    &msc SCRL_DOWN  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &kp RG(T)        &kp RG(W)
 &kp LS(LA(LC(LG(SPACE))))  &kp LS(LC(LA(LG(T))))  &kp LC(LS(NUMBER_4))  &kp LC(LS(N5))        &kp LC(LS(NUMBER_6))  &kp C_VOLUME_DOWN                                  &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp RG(L)        &kp RS(RG(T))
 &kp LG(Z)                  &kp LG(X)              &kp LC(LS(NUMBER_1))  &kp LC(LS(NUMBER_2))  &kp LC(LS(NUMBER_3))  &trans             &kp C_PLAY_PAUSE  &kp RC(DOWN)  &msc SCRL_LEFT  &mkp MB4        &mkp MCLK       &mkp MB5         &msc SCRL_RIGHT  &kp RG(R)
-&trans                     &trans                 &trans                &bt BT_SEL 0          &bt BT_SEL 1          &bt BT_SEL 2                                       &mkp LCLK       &mkp RCLK       &trans          &trans           &trans           &trans
+&trans                     &trans                 &trans                &bt BT_SEL 0          &bt BT_SEL 1          &bt BT_SEL 2                                       &mkp LCLK       &mkp RCLK       &mkp MCLK       &trans           &trans           &trans
             >;
 
             sensor-bindings =
