@@ -372,10 +372,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp Q  &kp L                       &kp U                           &kp COMMA                   &kp PERIOD                      &mt160_behavior LEFT_ALT LG(V)                                  &mt160_behavior RS(RA(RC(RG(T)))) RS(RG(V))  &kp K                                  &kp W                        &kp R                            &kp Y                        &kp P
-&kp E  &mt225_behavior LEFT_ALT I  &mt225_behavior LEFT_CONTROL A  &mt225_behavior LEFT_GUI O  &kp MINUS                       &mt160_behavior CAPS LG(C)                                      &mt160_behavior K_MENU RS(RG(P))             &kp G                                  &mt225_behavior RIGHT_GUI T  &mt225_behavior RIGHT_CONTROL N  &mt225_behavior RIGHT_ALT S  &kp H
-&kp Z  &kp X                       &kp C                           &kp V                       &kp SEMICOLON                   &none                           &kp C_PLAY_PAUSE  &kp RC(DOWN)  &none                                        &kp F                                  &kp D                        &kp M                            &kp J                        &kp B
-&none  &none                       &none                           &lt 4 BACKSPACE             &mt170_behavior LEFT_SHIFT TAB  &lt 2 SPACE                                                     &lt 1 ENTER                                  &mt225_behavior RIGHT_SHIFT BACKSPACE  &lt 4 DELETE                 &none                            &none                        &none
+&none  &kp Q  &kp L                       &kp U                           &kp COMMA                       &kp PERIOD                                     &kp K        &kp W                                  &kp R                            &kp Y                        &kp P  &none
+&none  &kp E  &mt225_behavior LEFT_ALT I  &mt225_behavior LEFT_CONTROL A  &mt225_behavior LEFT_GUI O      &kp MINUS                                      &kp G        &mt225_behavior RIGHT_GUI T            &mt225_behavior RIGHT_CONTROL N  &mt225_behavior RIGHT_ALT S  &kp H  &none
+&none  &kp Z  &kp X                       &kp C                           &kp V                           &kp SEMICOLON  &kp C_PLAY_PAUSE  &kp RC(DOWN)  &kp F        &kp D                                  &kp M                            &kp J                        &kp B  &none
+&none  &none  &none                       &lt 4 BACKSPACE                 &mt170_behavior LEFT_SHIFT TAB  &lt 2 SPACE                                    &lt 1 ENTER  &mt225_behavior RIGHT_SHIFT BACKSPACE  &lt 4 DELETE                     &none                        &none  &none
             >;
 
             sensor-bindings =
