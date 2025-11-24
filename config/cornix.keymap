@@ -444,10 +444,10 @@
 
         Mouse_layer_4 {
             bindings = <
-&none  &none  &mkp LCLK       &msc SCRL_DOWN  &mkp RCLK        &none                                 &none  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &mt220_behavior RS(RA(RC(RG(T)))) RS(RG(V))  &none
-&none  &none  &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_RIGHT  &none                                 &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mt170_behavior K_MENU RS(RG(P))             &none
-&none  &none  &mkp MB4        &mkp MCLK       &mkp MB5         &none         &kp C_PP  &kp RC(DOWN)  &none  &mkp MB4        &mkp MCLK       &mkp MB5         &none                                        &none
-&none  &none  &none           &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2                          &none  &none           &none           &none            &none                                        &none
+&none  &none  &mkp LCLK       &msc SCRL_DOWN  &mkp RCLK        &none                                 &none          &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &mt220_behavior RS(RA(RC(RG(T)))) RS(RG(V))  &none
+&none  &none  &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_RIGHT  &none                                 &kp RS(RG(T))  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mt170_behavior K_MENU RS(RG(P))             &none
+&none  &none  &mkp MB4        &mkp MCLK       &mkp MB5         &none         &kp C_PP  &kp RC(DOWN)  &kp RS(RG(N))  &mkp MB4        &mkp MCLK       &mkp MB5         &none                                        &none
+&none  &none  &none           &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2                          &none          &mkp LCLK       &mkp RCLK       &none            &none                                        &none
             >;
 
             sensor-bindings =
